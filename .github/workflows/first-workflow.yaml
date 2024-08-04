@@ -12,7 +12,7 @@ jobs:
             node -v
             npm -v
   parallel-job-macos:
-    run-on: macos-latest
+    runs-on: macos-latest
     steps:
         - name: View SW Version
           run: sw_vers
@@ -21,6 +21,6 @@ jobs:
     needs: run-shell-commands
     steps:
       - name: echo a string
-        run: Write-ouput "Windows String"
+        run: Write-Output "Windows String"
       - name: Error Step
         run: doesnotexits
